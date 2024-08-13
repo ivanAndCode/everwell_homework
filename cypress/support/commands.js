@@ -44,6 +44,7 @@ Cypress.Commands.add('loginViaAPI', (email= 'defaultUser@gmail.com', password = 
 })
 
 Cypress.Commands.add('prepareAndCleanup', (email = 'defaultUser@gmail.com', password= '12solidDefaultStrongPassword33') => {
+  //for a given user
   //make some API calls to clean up any existing appointments
-  //or any other stale state/data associated with user
+  //or any other stale state/data associated with it
 })
