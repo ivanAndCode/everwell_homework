@@ -1,9 +1,10 @@
-describe('Login functionality should work', () => {
-  it('when logging in via UI', () => {
-    cy.visit('https://example.cypress.io')
+describe('Login functionality should work via', () => {
+  it('UI', () => {
+    cy.loginViaUI()
+    cy.
   })
 
-  it('when logging in via API', () => {
-    cy.visit('https://example.cypress.io')
+  it('API', () => {
+    cy.loginViaAPI()
   })
 })

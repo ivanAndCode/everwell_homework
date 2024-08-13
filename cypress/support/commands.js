@@ -23,3 +23,22 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('loginViaUI', (email= 'defaultUser@gmail.com', password= '12solidDefaultStrongPassword33') => {
+  //visit login
+  //type username
+  //type password
+  //click login button
+  //assert you on the right landing page & logged in
+})
+
+Cypress.Commands.add('loginViaAPI', (email= 'defaultUser@gmail.com', password = '12solidDefaultStrongPassword33') => {
+  //make API call (or whatever the sequence is)
+  //set the cookie (assumption that it is set via cookie)
+})
+
+
+Cypress.Commands.add('prepareAndCleanup', (email = 'defaultUser@gmail.com', password= '12solidDefaultStrongPassword33') => {
+  //make some API calls to clean up any existing appointments
+  //or any other stale state/data associated with user
+})
