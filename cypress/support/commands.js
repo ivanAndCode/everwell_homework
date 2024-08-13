@@ -24,6 +24,12 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import '@testing-library/cypress/add-commands'
+
+//TODO unhardcode default user email & password
+// add a new helper function to fetch users from the secret vault
+// with default user as a default (surprise!)
+// update readme mentioning the secret structure and default vs specific user usage patterns
 Cypress.Commands.add('loginViaUI', (email= 'defaultUser@gmail.com', password= '12solidDefaultStrongPassword33') => {
   //visit login
   //type username
@@ -36,7 +42,6 @@ Cypress.Commands.add('loginViaAPI', (email= 'defaultUser@gmail.com', password = 
   //make API call (or whatever the sequence is)
   //set the cookie (assumption that it is set via cookie)
 })
-
 
 Cypress.Commands.add('prepareAndCleanup', (email = 'defaultUser@gmail.com', password= '12solidDefaultStrongPassword33') => {
   //make some API calls to clean up any existing appointments

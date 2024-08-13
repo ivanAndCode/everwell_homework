@@ -11,7 +11,7 @@ declare namespace Cypress {
 
         /**
          * Login via interacting with API and saving the auth response
-         * * @example
+         * @example
          * cy.loginViaAPI()
          */
         loginViaAPI(email?: string, password?: string): Chainable<any>
