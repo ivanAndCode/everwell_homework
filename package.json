@@ -1,0 +1,14 @@
+{
+  "name": "everwell_homework",
+  "version": "1.0.0",
+  "description": "Take home task for the technical interview",
+  "scripts": {
+    "cy:run": "cypress run *",
+    "cy:open": "cypress open"
+  },
+  "author": "Ivan Karaman (aka ivanandcode)",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.13.2"
+  }
+}
