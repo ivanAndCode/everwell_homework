@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Take home task for the technical interview",
   "scripts": {
-    "cy:run:all": "cypress run *",
-    "cy:run:business:flows": "cypress run './flows/*'",
-    "cy:run:features": "cypress run './features/*'",
+    "cy:run:all": "cypress run -s '**'",
+    "cy:run:business:flows": "cypress run -s '**/ui/flows/*.js'",
+    "cy:run:features": "cypress run -s '**/ui/features/*.js'",
+    "cy:run:api": "cypress run -s '**/api/*'",
     "cy:open": "cypress open"
   },
   "author": "Ivan Karaman (aka ivanandcode)",
