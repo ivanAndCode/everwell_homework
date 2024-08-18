@@ -1,11 +1,20 @@
 name: Run tests on demand
-on: [push]
+on: [ push ]
 jobs:
   run-the-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: |
+      - name: Install dependencies
+        run: |
           npm ci
-          npm run cy:run:all
+      - name: Run API tests
+        run: |
+          npm run cy:run:api
+      - name: Run features/component tests
+        run: |
+          npm run cy:run:features
+      - name: Run business flow (e2e) tests
+        run: |
+          npm run cy:run:business:flows
