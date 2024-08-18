@@ -16,9 +16,18 @@ jobs:
         run: |
           npm run cy:run:features
 
+  run-feature-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run features/component tests
+        run: |
+          npm run cy:run:features
+
   run-business-flow-tests:
     runs-on: ubuntu-latest
-    needs: run-api-tests
+    needs:
+      - run-api-tests
+      - run-feature-tests
     steps:
       - name: Run business flow (e2e) tests
         run: |
