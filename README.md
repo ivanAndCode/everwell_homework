@@ -4,7 +4,7 @@ This is a repo to demo how UI E2E tests can be approached using Cypress as a tes
 
 ## Running tests
 Test status:  
-![Pipeline "on demand"](https://github.com/ivanAndCode/everwell_homework/github/docs/actions/workflows/run-on-demand.yml/badge.svg)
+![Pipeline "on demand"](https://github.com/ivanAndCode/everwell_homework/actions/workflows/run-on-demand.yml/badge.svg)
 
 Follow the scripts in the `package.json` file.   
 Example command: 
