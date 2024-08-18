@@ -1,7 +1,7 @@
 name: Run tests on demand
 on: [ push ]
 jobs:
-  run-the-tests:
+  run-api-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -15,6 +15,10 @@ jobs:
       - name: Run features/component tests
         run: |
           npm run cy:run:features
+
+  run-business-flow-tests:
+    runs-on: ubuntu-latest
+    steps:
       - name: Run business flow (e2e) tests
         run: |
           npm run cy:run:business:flows
